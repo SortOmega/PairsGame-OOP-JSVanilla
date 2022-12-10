@@ -315,7 +315,10 @@ const limpiarContenidoInternoHTML = (elementoParaLimpiar = Element) => {
   elementoParaLimpiar.innerHTML = "";
 };
 
-const barajarColeccion = (arrayParaBarajar = new Array(), Repetidos = true) => {
+const barajarColeccion = (
+  arrayParaBarajar = new Array(""),
+  Repetidos = true
+) => {
   try {
     if (!Array.isArray(arrayParaBarajar))
       throw "function barajarColeccion(): Parametro no es de tipo Array o una Colleccion!";
@@ -340,7 +343,11 @@ const barajarColeccion = (arrayParaBarajar = new Array(), Repetidos = true) => {
     } else if (!Repetidos) {
       //barajar y eliminare todos los datos repetidos que contenga el Array previo
       for (let i = 0; i < arrayParaBarajar.length; i++) {
-        if (!arrayBarajada.includes(arrayParaBarajar[i])) {
+        if (
+          !arrayBarajada.includes(arrayParaBarajar[i]) &&
+          arrayParaBarajar[i].trim() != "" &&
+          arrayParaBarajar[i].trim() != undefined
+        ) {
           arrayBarajada.push(arrayParaBarajar[i]);
           //console.log( i + ") " + arrayBarajada[i] );
           //console.log("TOMATE");
