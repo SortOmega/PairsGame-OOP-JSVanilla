@@ -1,0 +1,295 @@
+/*--------------------------Cabecezera de Importaciones-------------------------------*/
+@import url(fonts_online-imports.css);
+
+/*--------------------------ESTILOS GENERALES-----------------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*--------------------------FIN ESTILOS GENERALES-----------------------------------------*/
+/*--------------------------ENCABEZADO DE LA PAGINA-----------------------------------------*/
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    background-image: url(../imgs/Fondo\ degradado\ azul-morado\ con\ particulas.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
+.header__ArtWork {
+    display: flex;
+    flex-wrap: wrap;
+    /* Para mantener dimensiones intactas de las cajas internas, y moverlas en caso de no encajar en pany*/
+    width: 100%;
+}
+
+.header__ArtWork h1 {
+    display: flex;
+    font-family: 'Russo One', fantasy;
+    font-size: 1.4em;
+    text-align: center;
+    color: rgb(255, 0, 149);
+    text-shadow: 0 0 15px #000;
+    justify-content: center;
+    width: 100%;
+    transition: .2s;
+}
+
+.header__ArtWork h1:hover {
+    font-family: 'Russo One', fantasy;
+    color: #ffcb00;
+    font-size: 1.65em;
+}
+
+.header__ArtWork h3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transition: .2s;
+}
+
+.header__ArtWork h3:hover {
+    color: #aacb92;
+    text-shadow: 0 0 15px #000;
+    font-size: 1.2em;
+}
+
+/*--------------------------FIN ENCABEZADO DE LA PAGINA-----------------------------------------*/
+/*--------------------------CUERPO CONTENIDO DE LA PAGINA-----------------------------------------*/
+article {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    margin: 10px 25px;
+}
+
+article>h2 {
+    margin: 5vh;
+    text-align: center;
+}
+
+article>p {
+    margin: 8pt 0;
+    text-align: justify;
+    font-family: 'Fredoka One';
+}
+
+.StartGame {
+    margin: 25pt 0;
+    border-radius: 15px;
+}
+
+.StartGame:hover>a {
+    background-color: #ff5a00;
+}
+
+.StartGame a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 1.2em 3em;
+    background-color: #004cff;
+    border-radius: 15px;
+    transition: background .2s;
+}
+
+/*--------------------------FIN CUERPO CONTENIDO DE LA PAGINA-----------------------------------------*/
+/*--------------------------PIE DE PAGINA-----------------------------------------*/
+footer {
+    display: flex;
+    position: relative;
+    bottom: 0px;
+    transform: translateY(100%);
+    width: 100%;
+    height: 7vh;
+    background-color: #343434;
+    vertical-align: bottom;
+}
+
+/*--------------------------FIN PIE DE PAGINA-----------------------------------------*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ RESPONSIVE @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*Moviles M*/
+@media screen and (min-width: 282px) and (max-width: 361px) {
+
+    /*-------------------ENCABEZADO-------------------*/
+    .header__ArtWork h1 {
+        font-size: 1.8em;
+    }
+
+    .header__ArtWork h1:hover {
+        font-size: 2em;
+    }
+}
+
+/*Moviles L*/
+@media screen and (min-width: 361px) and (max-width: 426px) {
+
+    /*-------------------ENCABEZADO-------------------*/
+    .header__ArtWork h1 {
+        font-size: 2em;
+    }
+
+    .header__ArtWork h1:hover {
+        font-size: 2.2em;
+    }
+}
+
+/*Tablets*/
+@media screen and (min-width: 426px) and (max-width: 780px) {
+
+    /*-------------------ENCABEZADO-------------------*/
+    .header__ArtWork h1 {
+        font-size: 2.4em;
+    }
+
+    .header__ArtWork h1:hover {
+        font-size: 2.8em;
+    }
+
+    .header__ArtWork h3 {
+        font-size: 1.4em;
+    }
+
+    .header__ArtWork h3:hover {
+        font-size: 1.6em;
+    }
+
+    /*---------------------CUERPO---------------------*/
+    article>h2 {
+        font-size: 1.8em;
+        margin: 3.5vh;
+    }
+
+    article>p {
+        font-size: 13pt;
+    }
+
+    .StartGame a {
+        padding: 1.3em 4.2em;
+        font-size: 13pt;
+    }
+}
+
+/*Monitor*/
+@media screen and (min-width: 780px) and (max-width: 1025px) {
+
+    /*-------------------ENCABEZADO-------------------*/
+    .header__ArtWork h1 {
+        font-size: 2.8em;
+    }
+
+    .header__ArtWork h1:hover {
+        font-size: 3em;
+    }
+
+    .header__ArtWork h3 {
+        font-size: 1.6em;
+    }
+
+    .header__ArtWork h3:hover {
+        font-size: 1.8em;
+    }
+
+    /*---------------------CUERPO---------------------*/
+    article>h2 {
+        font-size: 1.9em;
+        margin: 3vh;
+    }
+
+    article>p {
+        margin: 10pt 8pt;
+        font-size: 14pt;
+    }
+
+    .StartGame a {
+        padding: 1.4em 4.5em;
+        font-size: 14pt;
+    }
+}
+
+/*Monitor L*/
+@media screen and (min-width: 1025px) and (max-width: 1441px) {
+
+    /*-------------------ENCABEZADO-------------------*/
+    .header__ArtWork h1 {
+        font-size: 2.9em;
+    }
+
+    .header__ArtWork h1:hover {
+        font-size: 3.1em;
+    }
+
+    .header__ArtWork h3 {
+        font-size: 1.7em;
+    }
+
+    .header__ArtWork h3:hover {
+        font-size: 1.9em;
+    }
+
+    /*---------------------CUERPO---------------------*/
+    article>h2 {
+        font-size: 2.1em;
+        margin: 2.8vh;
+    }
+
+    article>p {
+        margin: 10pt 15pt;
+        font-size: 15pt;
+    }
+
+    .StartGame a {
+        padding: 1.4em 4.5em;
+        font-size: 14pt;
+    }
+}
+
+/*Monitor HD*/
+@media screen and (min-width: 1441px) and (max-width: 1921px) {
+
+    /*-------------------ENCABEZADO-------------------*/
+    .header__ArtWork h1 {
+        font-size: 2.9em;
+    }
+
+    .header__ArtWork h1:hover {
+        font-size: 3.1em;
+    }
+
+    .header__ArtWork h3 {
+        font-size: 1.7em;
+    }
+
+    .header__ArtWork h3:hover {
+        font-size: 1.9em;
+    }
+
+    /*---------------------CUERPO---------------------*/
+    article>h2 {
+        font-size: 2.1em;
+        margin: 2.8vh;
+    }
+
+    article>p {
+        margin: 10pt 30pt;
+        font-size: 15pt;
+    }
+
+    .StartGame a {
+        padding: 1.4em 4.5em;
+        font-size: 14pt;
+    }
+}
+
+/*Monitor UHD*/
+@media screen and (min-width: 1921px) and (max-width: 2561px) {
+    /*-------------------ENCABEZADO-------------------*/
+    /*---------------------CUERPO---------------------*/
+}
