@@ -71,7 +71,7 @@ btnIniciarJuego.addEventListener("click", async (evento) => {
       archivoLeido = await lector
         .then((res) => res.blob())
         .then((res) => res.text());
-      console.log(typeof archivoLeido);
+      //console.log(typeof archivoLeido);
       preStateJuego(archivoLeido);
     } else if (radioManualWords.checked) {
       btnFileSelector.click();
@@ -125,7 +125,7 @@ const preStateJuego = (textos) => {
   fallidos = 0;
   actualizarValoresLabel(labelAciertos, aciertos);
   actualizarValoresLabel(labelFallidos, fallidos);
-  mostrarLabels();
+  //mostrarLabels();
   generarBtnPalabras(cantidadPalabras, textos);
 };
 
@@ -139,21 +139,32 @@ const generarBtnPalabras = (cantidadPalabras = 0, textos) => {
 
     palabrasObtenidas = barajarColeccion(palabrasObtenidas, false);
 
+    /*console.log(palabrasObtenidas);
+    console.log(palabrasObtenidas.length);
+    console.log(cantidadPalabras);//*/
+    if (palabrasObtenidas.length < cantidadPalabras) {
+      const messageError =
+        "El archivo no contiene la cantidad de palabras requeridas para jugar en la dificultad " +
+        labelDificultad.innerHTML +
+        "!";
+      alert(messageError);
+      throw messageError;
+    }
+
     let palabrasDificultad = new Array();
 
     for (let i = 0; i < cantidadPalabras; i++) {
       palabrasDificultad[i] = palabrasObtenidas[i];
     }
-
     for (let i = 0; i < cantidadPalabras; i++) {
       palabrasDificultad.push(palabrasDificultad[i]);
     }
 
     palabrasDificultad = barajarColeccion(palabrasDificultad);
 
-    for (let i = 0; i < palabrasDificultad.length; i++) {
+    /*for (let i = 0; i < palabrasDificultad.length; i++) {
       console.log(palabrasDificultad[i]);
-    }
+    }//*/
 
     for (let i = 1; i <= cantidadPalabras * 2; i++) {
       let botonGenerado = new buttonPalabra();
@@ -344,11 +355,11 @@ const barajarColeccion = (
       //barajar y eliminare todos los datos repetidos que contenga el Array previo
       for (let i = 0; i < arrayParaBarajar.length; i++) {
         if (
-          !arrayBarajada.includes(arrayParaBarajar[i]) &&
+          !arrayBarajada.includes(arrayParaBarajar[i].trim()) &&
           arrayParaBarajar[i].trim() != "" &&
           arrayParaBarajar[i].trim() != undefined
         ) {
-          arrayBarajada.push(arrayParaBarajar[i]);
+          arrayBarajada.push(arrayParaBarajar[i].trim());
           //console.log( i + ") " + arrayBarajada[i] );
           //console.log("TOMATE");
         }
