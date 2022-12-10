@@ -1,4 +1,4 @@
-class buttonPalabra {
+export default class buttonPalabra {
   index = 0;
   palabraBtn;
   elementId;

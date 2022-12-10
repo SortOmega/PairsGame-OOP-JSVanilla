@@ -1,3 +1,4 @@
+import buttonPalabra from "./buttonPalabra.js";
 //------------------------------ TERMINOS GLOBALES-----------------------------------------
 let cantidadPalabras = 0;
 let aciertos = 0;
