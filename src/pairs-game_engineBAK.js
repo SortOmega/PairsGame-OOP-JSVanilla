@@ -125,7 +125,7 @@ const preStateJuego = (textos) => {
   fallidos = 0;
   actualizarValoresLabel(labelAciertos, aciertos);
   actualizarValoresLabel(labelFallidos, fallidos);
-  //mostrarLabels();
+  mostrarLabels();
   generarBtnPalabras(cantidadPalabras, textos);
 };
 
