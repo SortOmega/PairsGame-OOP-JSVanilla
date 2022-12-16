@@ -29,6 +29,7 @@ header {
 header>h2 {
     box-sizing: border-box;
     font-size: 1.4em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     /*Para poder centrar verticalmente elementos eficazmente*/
     align-items: center;
@@ -38,6 +39,7 @@ header>h2 {
 
 .nav-button {
     margin: 0 10px;
+    user-select: none;
     align-items: center;
 }
 
@@ -162,6 +164,13 @@ header>nav>ul>li:hover>.navTxt {
     outline: none;
     background: linear-gradient(to bottom, #d8d8d8, #deb);
     border: 1px solid #0051fd;
+}
+
+.Game-Body__Options>.gb-dificultad>#cmbDificultad>option {
+    padding: 3pt;
+    background: #e3f3c3;
+    font-size: 15pt;
+    font-family: 'Acme';
 }
 
 .Game-Body__Options>#btnFileSelector {

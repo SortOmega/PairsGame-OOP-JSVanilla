@@ -5,6 +5,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 /*--------------------------FIN ESTILOS GENERALES-----------------------------------------*/
@@ -23,7 +24,6 @@ header {
 .header__ArtWork {
     display: flex;
     flex-wrap: wrap;
-    /* Para mantener dimensiones intactas de las cajas internas, y moverlas en caso de no encajar en pany*/
     width: 100%;
 }
 
@@ -69,15 +69,25 @@ article {
     margin: 10px 25px;
 }
 
-article>h2 {
+article>h2,
+article>h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 5vh;
     text-align: center;
 }
 
-article>p {
+article>p,
+article>ul {
+    display: block;
+    width: 90%;
     margin: 8pt 0;
     text-align: justify;
-    font-family: 'Fredoka One';
+    font-family: 'Acme';
+}
+
+article>ul {
+    list-style: none;
+    text-align: center;
 }
 
 .StartGame {
@@ -167,8 +177,9 @@ footer {
         margin: 3.5vh;
     }
 
-    article>p {
-        font-size: 13pt;
+    article>p,
+    article>ul {
+        font-size: 1.2rem;
     }
 
     .StartGame a {
@@ -203,9 +214,10 @@ footer {
         margin: 3vh;
     }
 
-    article>p {
+    article>p,
+    article>ul {
         margin: 10pt 8pt;
-        font-size: 14pt;
+        font-size: 1.3rem;
     }
 
     .StartGame a {
@@ -240,9 +252,10 @@ footer {
         margin: 2.8vh;
     }
 
-    article>p {
+    article>p,
+    article>ul {
         margin: 10pt 15pt;
-        font-size: 15pt;
+        font-size: 1.4rem;
     }
 
     .StartGame a {
@@ -252,7 +265,7 @@ footer {
 }
 
 /*Monitor HD*/
-@media screen and (min-width: 1441px) and (max-width: 1921px) {
+@media screen and (min-width: 1441px) {
 
     /*-------------------ENCABEZADO-------------------*/
     .header__ArtWork h1 {
@@ -277,19 +290,14 @@ footer {
         margin: 2.8vh;
     }
 
-    article>p {
+    article>p,
+    article>ul {
         margin: 10pt 30pt;
-        font-size: 15pt;
+        font-size: 1.5rem;
     }
 
     .StartGame a {
         padding: 1.4em 4.5em;
         font-size: 14pt;
     }
-}
-
-/*Monitor UHD*/
-@media screen and (min-width: 1921px) and (max-width: 2561px) {
-    /*-------------------ENCABEZADO-------------------*/
-    /*---------------------CUERPO---------------------*/
 }

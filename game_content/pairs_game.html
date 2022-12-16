@@ -1,76 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" media="screen" href="../css/pairs_game.css">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+    <link rel="stylesheet" media="screen" href="../css/pairs_game.css" />
+    <title>Pairs Game - Playing</title>
+  </head>
+  <body>
     <header>
-        <h2>The Pairs Game</h2>
-        <i class="nav-button">
-            <input type="checkbox" name="" id="check__Nav-Menu">
-            <label for="check__Nav-Menu" class="material-icons"> &#xe5d2 </label>
-        </i>
-        <nav class="header-navMenu">
-            <ul>
-                <li class="header__nav nav-inicio">
-                    <a href="../index.html">Inicio</a>
-                </li>
-                <li class="header__nav nav-dificultad nav-hidden">
-                    <span class="navTxt">Dificultad: <span class="navTxt-dificultad">NULL</span> </span>
-                </li>
-                <li class="header__nav nav-aciertos nav-hidden">
-                    <span class="navTxt">Aciertos: <span class="navTxt-aciertos">0</span> </span>
-                </li>
-                <li class="header__nav nav-fallidos nav-hidden">
-                    <span class="navTxt">Fallidos: <span class="navTxt-fallidos">0</span> </span>
-                </li>
-            </ul>
-        </nav>
+      <h2>The Pairs Game</h2>
+      <i class="nav-button">
+        <input type="checkbox" name="" id="check__Nav-Menu" />
+        <label for="check__Nav-Menu" class="material-icons"> menu </label>
+      </i>
+      <nav class="header-navMenu">
+        <ul>
+          <li class="header__nav nav-inicio">
+            <a href="../index.html">Inicio</a>
+          </li>
+          <li class="header__nav nav-dificultad nav-hidden">
+            <span class="navTxt"
+              >Dificultad: <span class="navTxt-dificultad">NULL</span>
+            </span>
+          </li>
+          <li class="header__nav nav-aciertos nav-hidden">
+            <span class="navTxt"
+              >Aciertos: <span class="navTxt-aciertos">0</span>
+            </span>
+          </li>
+          <li class="header__nav nav-fallidos nav-hidden">
+            <span class="navTxt"
+              >Fallidos: <span class="navTxt-fallidos">0</span>
+            </span>
+          </li>
+        </ul>
+      </nav>
     </header>
     <div class="Game-Body">
-        <div class="Game-Body__Options">
-            <div class="gbOptions gb-dificultad">
-                <label for="cmbDificultad">Seleccionar Dificultad:</label>
-                <select name="cmbDificultad" id="cmbDificultad">
-                    <option value="gm_easy">
-                        Fácil
-                    </option>
-                    <option value="gm_normal">
-                        Normal
-                    </option>
-                    <option value="gm_hard">
-                        Dificil
-                    </option>
-                    <option value="gm_expert">
-                        Experto
-                    </option>
-                </select>
-            </div>
-            
-            <div class="gbOptions gb-generar">
-                <div class="gb-generar__radio">
-                    <input type="radio" name="rdGenerar" id="rdGenerar_auto">
-                    <label for="rdGenerar_auto">Escoger Palabras Aleatorias</label>
-                </div>
-                <div class="gb-generar__radio">
-                    <input type="radio" name="rdGenerar" id="rdGenerar_manual">
-                    <label for="rdGenerar_manual">Palabras en archivo local</label>
-                </div>
-            </div>
-            
-            <input type="file" name="files[]" title="Selector" id="btnFileSelector" accept=".txt">
-            <button type="button" class="gbOptions gb-boton" id="btnEmpezarGame">Iniciar Juego</button>
+      <div class="Game-Body__Options">
+        <div class="gbOptions gb-dificultad">
+          <label for="cmbDificultad">Seleccionar Dificultad:</label>
+          <select name="cmbDificultad" id="cmbDificultad">
+            <option value="gm_easy">Fácil</option>
+            <option value="gm_normal">Normal</option>
+            <option value="gm_hard">Dificil</option>
+            <option value="gm_expert">Experto</option>
+          </select>
         </div>
-        <div class="Game-Body__playarea">
-            <div class="gbPlayArea gbGridElements">
-            </div>
+
+        <div class="gbOptions gb-generar">
+          <div class="gb-generar__radio">
+            <input type="radio" name="rdGenerar" id="rdGenerar_auto" />
+            <label for="rdGenerar_auto">Escoger Palabras Aleatorias</label>
+          </div>
+          <div class="gb-generar__radio">
+            <input type="radio" name="rdGenerar" id="rdGenerar_manual" />
+            <label for="rdGenerar_manual">Palabras en archivo local</label>
+          </div>
         </div>
+
+        <input
+          type="file"
+          name="files[]"
+          title="Selector"
+          id="btnFileSelector"
+          accept=".txt" />
+        <button type="button" class="gbOptions gb-boton" id="btnEmpezarGame">
+          Iniciar Juego
+        </button>
+      </div>
+      <div class="Game-Body__playarea">
+        <div class="gbPlayArea gbGridElements"></div>
+      </div>
     </div>
     <script type="module" src="../src/pairs-game_engineBAK.js"></script>
-</body>
+  </body>
 </html>
