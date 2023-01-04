@@ -11,3 +11,19 @@ Este es el juego "Juego de Pares" desarrollado en Java, pero adaptado a javascri
 ## Links
 
 - [PairsGame-OOP-JavaProject](https://github.com/SortOmega/PairsGame-OOP-JavaProject)
+
+## Screenshots
+
+![](imgs/screenshot01.png?raw=true "Main Page")
+
+![](imgs/screenshot02.png?raw=true "Description")
+
+![](imgs/screenshot03.png?raw=true "Game")
+
+![](imgs/screenshot04.png?raw=true "InGame")
+
+![](imgs/screenshot05.png?raw=true "A Custom File")
+
+![](imgs/screenshot06.png?raw=true "Custom File chosen")
+
+![](imgs/screenshot07.png?raw=true "Menu Options and Info")
